@@ -47,12 +47,19 @@ pub fn run() {
     left.sort();
     right.sort();
 
-    // Walk thru and add to sum
+    // Walk thru
     let mut sum = 0;
+    let mut score = 0;
     for i in 0..left.len() {
+        // Add to sum
         sum += (left[i] - right[i]).abs();
+
+        // Count left nums appearance in right
+        let count:usize = right.iter().filter(|&n| *n == left[i]).count();
+        // Multiply times appeared by leftnum + add to score
+        score += left[i] * count as i32;
     }
 
     // Output the results
-    println!("Results: {:?}", sum);
+    println!("Results: pt1: {:?} pt2: {:?}", sum, score);
 }

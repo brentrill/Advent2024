@@ -6,7 +6,7 @@ Solve daily coding challenges in Rust! Each challenge is implemented in its own 
 ## Directory Structure
 ```
 src/
-├── challenges/
+├── days/
 │   ├── day1.rs
 │   ├── day2.rs
 │   ├── ...
